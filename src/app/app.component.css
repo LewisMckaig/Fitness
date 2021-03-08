@@ -1,0 +1,15 @@
+.dgColor {
+  background-color: #262626;
+}
+.lgColor {
+  background-color: #404040;
+}
+.main-div{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-card{
+  top : 10vh;
+}
