@@ -4,11 +4,11 @@
     <mat-card-title>Device 1</mat-card-title>
   </mat-card-header>
   <mat-card-content>
-	  <div class ="column"><p></p></div>
+	  <div class ="column dgtext" *ngFor="let item of items"><p>last reading at: {{item.payload.doc.data().Date}} </p></div>
 	  <div class ="column"><p></p></div>
 	  <div class ="column">
-		<p class = "goalTxt">30 Mins</p>
-		<mat-progress-bar mode="determinate" value="50"></mat-progress-bar>
+		<p class = "goalTxt" *ngFor="let item of items">{{item.payload.doc.data().Activity}} mins</p>
+		<mat-progress-bar mode="determinate"*ngFor="let item of items" value="{{(item.payload.doc.data().Activity/60)*100}}"></mat-progress-bar>
 	</div>
     
   </mat-card-content>

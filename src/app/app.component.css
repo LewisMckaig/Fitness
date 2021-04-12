@@ -1,5 +1,6 @@
 .dgColor {
-  background-color: #262626;
+  background: url("./img/background.svg")no-repeat center center;
+  background-size: cover;
 }
 .lgColor {
   background-color: #404040;
@@ -10,6 +11,45 @@
   justify-content: center;
   align-items: center;
 }
-.main-card{
-  top : 10vh;
+
+.top-div{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
 }
+
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding-left: 10px;
+  padding-right:10px;
+}
+
+.settings{
+  padding-left: 10%;
+
+}
+
+.mat-fab{
+    height:150px !important;
+    width: 150px !important;
+    padding-right: 5%;
+    background-color: #03DAC5;
+    
+  }
+
+.mat-icon{
+    font-size:50px !important;
+    display: flex;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+

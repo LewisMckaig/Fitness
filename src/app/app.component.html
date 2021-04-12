@@ -5,14 +5,18 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <body class = "dgColor">
-  <div ng-app="">
+  <div>
     <toolbar-basic>Loading</toolbar-basic>
 
-    <div class= "main-div">
+    <div class= "top-div">
       <Card id = "main-card">Loading</Card>
     </div>
-    <div class = "main-div"> <card-sm>loading</card-sm></div>
-    
+    <div class = "main-div" >
+    <div class ="column"><p><card-sm>loading</card-sm></p></div>
+	  <div class ="column"><p><card-sm>loading</card-sm></p></div>
+    <div class ="column settings" ><button mat-fab aria-label="Example icon-button with a heart icon"><mat-icon>build</mat-icon></button></div>
+   </div>
+    <Footer></Footer>
   </div>
 
 </body>

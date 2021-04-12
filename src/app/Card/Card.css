@@ -2,7 +2,6 @@
 	min-width: 75vw;
 	min-height: 10vw;
 	position: relative;
-	top : 100px;
 }
 .goalTxt{
 	color: #03DAC5;
@@ -13,6 +12,13 @@
 .column {
   float: left;
   width: 33.33%;
+}
+
+.dgtext{
+	position: relative;
+	bottom: 0;
+	font-size: smaller;
+	color: #E5E4E3;
 }
 
 /* Clear floats after the columns */
@@ -34,4 +40,15 @@
 ::ng-deep .mat-progress-bar-buffer {
 	background: #E6E6E6;
 	height : 40px !important;
+}
+
+.mat-card{
+	transition: box-shadow .5s;
+}
+
+.mat-card:hover{
+	transition: box-shadow .5s;
+    box-shadow: 0 2px 1px -1px rgba(3,218,197,1), 
+                0 1px 1px 0 rgba(3,218,197,1), 
+				0 1px 3px 0 rgba(3,218,197,1);
 }
