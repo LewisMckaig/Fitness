@@ -1,0 +1,68 @@
+.card{
+	position: fixed;
+	width: 80%;
+	left: 10%;
+	right: 10%;
+	height: 40%;
+	top: 30%;
+	background-color: #404040;
+}
+
+.headTxt{
+	font-size: larger;
+}
+
+.closeBtn{
+	position: relative;
+	cursor: pointer;
+}
+
+.goalTxt{
+	color: #03DAC5;
+	font-size: larger;
+}
+
+.mat-card{
+	transition: box-shadow .5s;
+}
+
+.mat-slider{
+	width: 80%;
+}
+
+.mat-card:hover{
+	transition: box-shadow .5s;
+    box-shadow: 0 2px 1px -1px rgba(3,218,197,1), 
+                0 1px 1px 0 rgba(3,218,197,1), 
+				0 1px 3px 0 rgba(3,218,197,1);
+}
+
+::ng-deep .mat-slider-fill::after {
+	background-color: #03DAC5;
+	height : 40px !important;
+}
+
+::ng-deep .mat-slider-buffer {
+	background: #E6E6E6;
+	height : 40px !important;
+}
+
+.mat-red{
+	background-color: #ff0000;
+}
+.mat-yellow{
+	color: black;
+	background-color: yellow;
+}
+.mat-green{
+	color: black;
+	background-color: greenyellow;
+}
+
+.mat-aqua{
+	background-color:#03DAC5;
+	color: black;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}

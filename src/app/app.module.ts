@@ -12,6 +12,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 import { RouterModule } from '@angular/router';
 import { rootRouterConfig } from './App.routes';
+import { GoalCard } from './smallCard/GoalCard';
+import { Settings } from './settingsCard/Settings';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { rootRouterConfig } from './App.routes';
     ToolbarBasic,
     Card,
     cardSm,
-    Footer
+    Footer,
+    GoalCard,
+    Settings
   ],
   imports: [
     BrowserModule,

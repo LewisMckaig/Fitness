@@ -1,15 +1,27 @@
 .example-card {
 	left: 30px;
 	max-width: 90%;
-	min-height: 20vw;
+	min-height: 35vh;
 	position: relative;
 
 }
-
-.goalTxt{
-	color: #03DAC5;
+.headTxt{
 	text-align: center;
 	font-size: large;
+}
+
+.goalTxt{
+	color: rgba(3,218,197,1);
+}
+
+.bigTxt{
+	font-size: larger;
+}
+
+.resultTxt{
+	color: White;
+	text-align: left;
+	font-size: small;
 }
 
 .column {
@@ -34,7 +46,7 @@
 }
 
 ::ng-deep .mat-progress-bar-buffer {
-	background: #E6E6E6;
+	background: grey;
 	height : 40px !important;
 }
 

@@ -1,12 +1,13 @@
 .example-card {
 	min-width: 75vw;
-	min-height: 10vw;
+	min-height: 10vh;
 	position: relative;
 }
 .goalTxt{
 	color: #03DAC5;
 	text-align: center;
 	font-size: large;
+	top:0;
 }
 
 .column {

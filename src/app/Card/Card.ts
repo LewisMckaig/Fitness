@@ -14,19 +14,31 @@ export class Card implements OnInit{
   timeValue: number = 0;
   progress: number = 0;
   items: Array<any>;
+  settings: Array<any>;
+  daily = 0;
 
     constructor(
     public firebaseService: FirebaseService,
     private router: Router
   ) { }
 
-  ngOnInit(){
+  ngOnInit() {
     this.getData();
+    this.getSettings();
   }
 
-  getData(){
+  getData() {
     this.firebaseService.getReadings().subscribe(result => {
       this.items = result;
+    })
+  }
+
+  getSettings() {
+    this.firebaseService.getSettings().subscribe(result => {
+      this.settings = result;
+      for (const item of this.settings){
+        this.daily = Math.floor(item.payload.doc.data().Daily);
+      }
     })
   }
 }

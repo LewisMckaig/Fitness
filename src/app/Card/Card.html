@@ -1,14 +1,14 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <mat-card class="example-card">
   <mat-card-header>
-    <mat-card-title>Device 1</mat-card-title>
+    <mat-card-title>Today's Activity</mat-card-title>
   </mat-card-header>
   <mat-card-content>
-	  <div class ="column dgtext" *ngFor="let item of items"><p>last reading at: {{item.payload.doc.data().Date}} </p></div>
+	  <div class ="column dgtext"><p></p></div>
 	  <div class ="column"><p></p></div>
 	  <div class ="column">
-		<p class = "goalTxt" *ngFor="let item of items">{{item.payload.doc.data().Activity}} mins</p>
-		<mat-progress-bar mode="determinate"*ngFor="let item of items" value="{{(item.payload.doc.data().Activity/60)*100}}"></mat-progress-bar>
+    <p class = "goalTxt" *ngFor="let item of items">{{item.payload.doc.data().Activity}} mins</p>
+		<mat-progress-bar mode="determinate"*ngFor="let item of items" value="{{(item.payload.doc.data().Activity/daily)*100}}"></mat-progress-bar>
 	</div>
     
   </mat-card-content>

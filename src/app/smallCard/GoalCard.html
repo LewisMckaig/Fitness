@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<mat-card class="example-card">
+	<mat-card-header>
+  	</mat-card-header>
+	<mat-card-content>
+		<div *ngFor="let item of settings" class = "headTxt">
+			<p>Weekly target</p>
+			<p class = "goalTxt bigTxt">{{getTotal()}} Minutes this week</p>
+			<hr>
+			<p class = "goalTxt bigTxt">{{item.payload.doc.data().Weekly}} Minute target</p>
+			<hr>
+			<p>Daily target</p>
+			<p class = "goalTxt bigTxt">{{item.payload.doc.data().Daily}} Minute target</p>
+		</div>
+  </mat-card-content>
+</mat-card>

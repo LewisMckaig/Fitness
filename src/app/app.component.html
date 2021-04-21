@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<body class = "dgColor">
+<body class = "dgColor" >
   <div>
     <toolbar-basic>Loading</toolbar-basic>
 
@@ -13,8 +14,12 @@
     </div>
     <div class = "main-div" >
     <div class ="column"><p><card-sm>loading</card-sm></p></div>
-	  <div class ="column"><p><card-sm>loading</card-sm></p></div>
-    <div class ="column settings" ><button mat-fab aria-label="Example icon-button with a heart icon"><mat-icon>build</mat-icon></button></div>
+	  <div class ="column"><p><card-Goal>loading</card-Goal></p></div>
+    <div class ="column settings" ><button mat-fab aria-label="icon-button with a Wrench icon" (click)="isVisible = true"><mat-icon>build</mat-icon></button></div>
+   </div>
+   <div *ngIf="isVisible == true">
+   <app-settigns-card class = "Settings"></app-settigns-card>
+   <button mat-raised-button class ="closeButton" (click)="isVisible = false">close</button>
    </div>
     <Footer></Footer>
   </div>
