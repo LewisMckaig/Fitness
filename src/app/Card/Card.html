@@ -4,10 +4,13 @@
     <mat-card-title>Today's Activity</mat-card-title>
   </mat-card-header>
   <mat-card-content>
-	  <div class ="column dgtext"><p></p></div>
-	  <div class ="column"><p></p></div>
 	  <div class ="column">
-    <p class = "goalTxt" *ngFor="let item of items">{{item.payload.doc.data().Activity}} mins</p>
+    <mat-icon *ngIf = "isChecked == true">directions_run</mat-icon><mat-icon *ngIf = "isChecked == false">accessibility</mat-icon>
+    <mat-slide-toggle [(ngModel)] = "isChecked" (change) ="toggle()" >Activity Recording on/off</mat-slide-toggle>
+    </div>
+	  <div class ="column"><p></p></div>
+	  <div class ="column" *ngFor="let item of items">
+    <p class = "goalTxt" >{{item.payload.doc.data().Activity}} Active Minutes</p>
 		<mat-progress-bar mode="determinate"*ngFor="let item of items" value="{{(item.payload.doc.data().Activity/daily)*100}}"></mat-progress-bar>
 	</div>
     

@@ -14,6 +14,7 @@ import { RouterModule } from '@angular/router';
 import { rootRouterConfig } from './App.routes';
 import { GoalCard } from './smallCard/GoalCard';
 import { Settings } from './settingsCard/Settings';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { Settings } from './settingsCard/Settings';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     RouterModule.forRoot(rootRouterConfig, {useHash: false}),
+    FormsModule,
   ],
   entryComponents: [ToolbarBasic],
   providers: [],

@@ -5,7 +5,7 @@
   <mat-card-content ng-app="App">
 
     <p class = "headTxt">Weekly Average</p>
-  <p class = "goalTxt headTxt" ngbind="average">{{getAverage()}} minutes</p>
+  <p class = "goalTxt headTxt" ngbind="average">{{getAverage()}} Active Minutes</p>
     <hr>
     <p class = "resultTxt" *ngFor="let item of week">{{item.payload.doc.data().Date}} : {{item.payload.doc.data().Activity}} mins <mat-progress-bar mode="determinate" value="{{(item.payload.doc.data().Activity/daily)*100}}"> </mat-progress-bar></p>
   </mat-card-content>

@@ -16,6 +16,7 @@ export class Card implements OnInit{
   items: Array<any>;
   settings: Array<any>;
   daily = 0;
+  isChecked : boolean;
 
     constructor(
     public firebaseService: FirebaseService,
@@ -38,7 +39,12 @@ export class Card implements OnInit{
       this.settings = result;
       for (const item of this.settings){
         this.daily = Math.floor(item.payload.doc.data().Daily);
+        this.isChecked = item.payload.doc.data().Recording;
       }
     })
+  }
+
+  toggle() {
+    this.firebaseService.changeRecordingState(this.isChecked);
   }
 }

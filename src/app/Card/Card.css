@@ -15,6 +15,11 @@
   width: 33.33%;
 }
 
+.mat-icon{
+	font-size: 40px;
+	margin-right: 10px;
+}
+
 .dgtext{
 	position: relative;
 	bottom: 0;

@@ -35,4 +35,8 @@ export class FirebaseService {
    this.db.collection('Settings').doc('Goals').update({Daily: daily})
    this.db.collection('Settings').doc('Goals').update({Weekly: weekly})
  }
+
+ changeRecordingState(state: boolean){
+    this.db.collection('Settings').doc('Goals').update({Recording: state})
+ }
 }

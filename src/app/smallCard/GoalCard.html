@@ -5,11 +5,11 @@
 	<mat-card-content>
 		<div *ngFor="let item of settings" class = "headTxt">
 			<p>Weekly target</p>
-			<p class = "goalTxt bigTxt">{{getTotal()}} Minutes this week</p>
+			<p class = "goalTxt bigTxt">{{getTotal()}} Minutes this week:</p>
 			<hr>
-			<p class = "goalTxt bigTxt">{{item.payload.doc.data().Weekly}} Minute target</p>
+			<p class = "goalTxt bigTxt">{{item.payload.doc.data().Weekly}} Active Minute target</p>
 			<hr>
-			<p>Daily target</p>
+			<p>Daily target:</p>
 			<p class = "goalTxt bigTxt">{{item.payload.doc.data().Daily}} Minute target</p>
 		</div>
   </mat-card-content>
