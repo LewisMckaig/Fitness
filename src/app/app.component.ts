@@ -1,3 +1,13 @@
+/**
+ * AppComponent.ts
+ * style - app.component.css
+ * html - app.component.html
+ * Author: Lewis Mckaig
+ * Date: April 2021
+ *
+ * Description: main page where all other compnents are displayed on.
+ *
+ */
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -9,7 +19,8 @@ import { Component, OnInit, Input } from '@angular/core';
 export class AppComponent{
   title = 'Fitness';
 
-  @Input() isVisible: false;
+  @Input() isVisible: boolean;
+
 
 }
 

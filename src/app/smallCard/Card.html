@@ -3,14 +3,22 @@
   <mat-card-header>
   </mat-card-header>
   <mat-card-content ng-app="App">
-
+  <div *ngIf ="toggle === true">
     <p class = "headTxt">Weekly Average</p>
   <p class = "goalTxt headTxt" ngbind="average">{{getAverage()}} Active Minutes</p>
     <hr>
     <p class = "resultTxt" *ngFor="let item of week">{{item.payload.doc.data().Date}} : {{item.payload.doc.data().Activity}} mins <mat-progress-bar mode="determinate" value="{{(item.payload.doc.data().Activity/daily)*100}}"> </mat-progress-bar></p>
+  </div>
+  <div *ngIf= "toggle == false">
+  <p class = "headTxt">Trophy Cabinet</p>
+    <hr>
+  <div *ngFor="let trophy of trophies"><button mat-fab aria-label="icon-button with a Wrench icon"><mat-icon>directions_run</mat-icon></button> {{trophy.payload.doc.data().Date}}</div>
+  
+  </div>
   </mat-card-content>
   <mat-card-actions>
-
+    <button mat-raised-button *ngIf="toggle == true"(click)="toggleCard()">show trophies</button>
+    <button mat-raised-button *ngIf="toggle == false"(click)="toggleCard()">Show Weekly Activity</button>
   </mat-card-actions>
 </mat-card>
 

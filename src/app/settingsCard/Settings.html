@@ -12,6 +12,9 @@
 		<div class = "headTxt">Weekly Target:</div><div class = "goalTxt">{{this.weekly}} Minutes</div>
 		  <mat-slider thumbLabel  [displayWith]="formatLabel" tickInterval="auto"  min="30"  max="240" (valueChange)="onChangeWeek($event)" value = {{this.weekly}}></mat-slider>
 		  <hr>
+		<div class = "headTxt">Device Sensitivity:</div><div class = "goalTxt">{{this.sensitivity}}</div>
+		  <mat-slider thumbLabel  [displayWith]="formatLabel" tickInterval="auto"  min="100"  max="2000" (valueChange)="onChangeSens($event)" value = {{this.sensitivity}}></mat-slider>
+		  <hr>
 		  	<div class = "headTxt">Difficulty Presets: 
 			  <button mat-raised-button color="green" (click)="easyPreset()">Easy</button>
 			  <button mat-raised-button color="yellow" (click)="medPreset()">Medium</button>

@@ -1,3 +1,8 @@
+/**
+ * this is the material module. 
+ * imports all the components from angualr material 
+ * angular material can be found at: https://material.angular.io
+ */
 import {NgModule} from '@angular/core';
 import {A11yModule} from '@angular/cdk/a11y';
 import {DragDropModule} from '@angular/cdk/drag-drop';

@@ -1,3 +1,14 @@
+/**
+ * GoalCard.ts
+ * style - card-Sm.css
+ * html - GoalCard.html
+ * Author: Lewis Mckaig
+ * Date: April 2021
+ *
+ * Description: Small card, displays the curernt goals and the current weekly activity
+ * shares a css with smallCard
+ *
+ */
 import {Component, OnInit} from '@angular/core';
 import { FirebaseService } from '../services/firebase.service';
 import { Router, Params } from '@angular/router';
@@ -21,7 +32,7 @@ export class GoalCard {
   ) { }
 
   /**
-   * This is called when the page is loaded
+   * Runs getData() and getSettings() when loaded
    */
   ngOnInit(){
     this.getData();
@@ -37,12 +48,19 @@ export class GoalCard {
     })
   }
 
+  /**
+   * gets the last 7 items in db, used for calculating total weekly active minutes
+   */
   getData()  {
     this.firebaseService.getWeek().subscribe(result => {
       this.week = result;
     })
   }
 
+  /**
+   * calculates the toal active minutes
+   * returns: total
+   */
   getTotal() {
     this.total = 0;
     for (const item of this.week ){

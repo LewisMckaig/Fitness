@@ -55,6 +55,10 @@
 	transition: box-shadow .5s;
 }
 
+.mat-fab{
+	background-color: #ffd700;
+}
+
 .mat-card:hover{
 	transition: box-shadow .5s;
     box-shadow: 0 2px 1px -1px rgba(3,218,197,1), 
